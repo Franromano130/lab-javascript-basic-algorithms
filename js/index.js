@@ -1,31 +1,42 @@
-console.log("I'm ready!")
+// Iteration 1: Names and Input
 
-let hacker1 = "Jason";
-let hacker2 = "Mario";
-let driver =
-"the driver name is" + " " + hacker1;
-console.log(driver)
-let navigator = 
-"the navigators name is" + " " + hacker2; {
-console.log(navigator)
-}
-const str = "Jason"
-const str2 = "Mario"
-if (str.length = str2.length){
-    console.log("Wow, you both have equally long names, XX characters!")
-}
-else if (str.length > str2.length){
-    console.log("The driver has the longest name, it has XX characters.")
-}
-else if (str.length < str2.length){
-    console.log("It seems that the navigator has the longest name, it has XX characters.")
-}
-const sentence1= "j a s o n"
-console.log(sentence1.toUpperCase())
+const hacker1 = 'Fran'
+const hacker2 = 'Alejandro'
 
-let reversed = "";
- 
-for (let i = str2.length - 1; i >= 0; i--) {
-  reversed += str2[i];
+console.log(`The driver's name is ${hacker1}`)
+console.log(`The navigator's name is ${hacker2}`)
+
+// Iteration 2: Conditionals
+
+if (hacker1.length > hacker2.length) {
+  console.log(`The driver has the longest name, it has ${hacker1.length} characters`)
+} else if (hacker1.length < hacker2.length) {
+  console.log(`It seems that the navigator has the longest name, it has ${hacker2.length} characters`)
+} else {
+  console.log(`Wow,yopu both have equally long names, ${hacker1.length}`)
 }
-console.log(reversed);
+
+// Iteration 3: Loops
+
+let spacedName = ""
+for (index of hacker1) {
+  spacedName += ` ${index}`.toUpperCase()
+}
+console.log(spacedName.trim())
+
+
+let secondName = ""
+for (i = hacker2.length - 1; i >= 0; i--) {
+  secondName += `${hacker2[i]}`
+}
+console.log(secondName)
+
+
+const hackers = [hacker1, hacker2].sort()
+if (hacker1.toUpperCase() === hacker2.toUpperCase()) {
+  console.log("What?! You both have the same name?")
+} else if (hackers[0] !== hacker1) {
+  console.log("Yo, the navigator goes first definetely.")
+} else if (hackers[0] === hacker1) {
+  console.log("The driver's name goes first." )
+}
